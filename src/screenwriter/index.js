@@ -39,7 +39,7 @@ class ScreenWriter extends React.Component {
   }
 
   render() {
-    const page = this.state.page
+    const page = document.location.href.replace(/\/screenwriter.html.*$/, this.state.page)
     const $list = Object.keys(scenes).map(id =>
       <li className={ cn('item', { active: this.state.active === id }) }
           onClick={() => this.onSceneClick(id)}>{scenes[id].name}
