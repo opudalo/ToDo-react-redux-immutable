@@ -11,6 +11,9 @@ var webpackConfig = {
   name    : 'client',
   target  : 'web',
   entry   : {
+    screenwriter : [
+      paths.project(config.dir_src) + '/screenwriter/index.js',
+    ],
     app : [
       paths.project(config.dir_src) + '/init.js',
     ],
@@ -26,8 +29,16 @@ var webpackConfig = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new HtmlWebpackPlugin({
+      template : paths.src('screenwriter.html'),
+      hash     : cache,
+      chunks   : ['screenwriter', 'vendor'],
+      filename : 'screenwriter.html',
+      inject   : 'body'
+    }),
+    new HtmlWebpackPlugin({
       template : paths.src('index.html'),
       hash     : cache,
+      chunks   : ['app', 'vendor'],
       filename : 'index.html',
       inject   : 'body'
     })

@@ -7,9 +7,12 @@
       "ignoreComments": true
     }],
     "react/jsx-indent-props": [2, 4],
+    "comma-dangle": [2, "never"],
     "no-console": 0,
+    "semi": [2, "never"],
     "new-cap": 0,
     "no-undef": [2],
+    "prefer-const": [2],
     "arrow-body-style": 0,
     react/jsx-closing-bracket-location: 0,
     react/jsx-space-before-closing: 0,

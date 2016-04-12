@@ -1,6 +1,6 @@
-import * as types from 'constants/ActionTypes';
-import { List, Map } from 'immutable';
-import { combineReducers } from 'redux';
+import * as types from 'constants/ActionTypes'
+import { List, Map } from 'immutable'
+import { combineReducers } from 'redux'
 
 function todoList(state = List(), action) {
   switch (action.type) {
@@ -8,26 +8,26 @@ function todoList(state = List(), action) {
       return state.push(Map({
         id: action.id,
         text: action.text,
-        isCompleted: false,
-      }));
+        isCompleted: false
+      }))
 
     case types.COMPLETE_TODO:
       // map through todos to find matching ID
       return state.map(todo => {
         if (todo.get('id') === action.id) {
-          return todo.update('isCompleted', v => !v);
+          return todo.update('isCompleted', v => !v)
         }
-        return todo;
-      });
+        return todo
+      })
 
     case types.DELETE_TODO:
-      return state.filter(todo => todo.get('id') !== action.id);
+      return state.filter(todo => todo.get('id') !== action.id)
 
     case types.DELETE_ALL_TODOS:
-      return state.clear();
+      return state.clear()
 
     default:
-      return state;
+      return state
   }
 }
 
@@ -35,16 +35,16 @@ function todoList(state = List(), action) {
 function activeFilter(state = 'all', action) {
   switch (action.type) {
     case types.CHANGE_FILTER:
-      console.info('%cFilter changed: ' + action.filter.toUpperCase(), 'color:red; font-weight:bold;');
-      return action.filter;
+      console.info('%cFilter changed: ' + action.filter.toUpperCase(), 'color:red; font-weight:bold;')
+      return action.filter
 
     default:
-      return state;
+      return state
   }
 }
 
 
 export default combineReducers({
   activeFilter,
-  todoList,
-});
+  todoList
+})
