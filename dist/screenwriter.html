@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>ToDo opp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <style>
+    * { 
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #screenwriter {
+      height: 100%;
+    }
+
+    .page {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .stories {
+      width: 250px;
+      border-right: 1px solid;
+      background: #3c3c3c;
+      padding: 20px 0px;
+      color: #ececec;
+      position: relative;
+      height: 100%;
+      font-weight: 100;
+    }
+
+    .title {
+      font-size: 24px;
+      text-transform: uppercase;
+      padding: 0px 0 5px 25px;
+    }
+
+    .list {
+      cursor: pointer;
+      padding: 0;
+      font-size: 16px;
+      list-style-type: none;
+    }
+
+    .item {
+      color: #eee;
+      padding: 5px 5px 5px 25px;
+    }
+
+    .item.active {
+      background: #555;
+    }
+
+    .item:hover.active {
+      background: #555;
+    }
+
+    .item:hover {
+      background: #222;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 50px;
+      cursor: pointer;
+      display: inline-block;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      left: 50%;
+      min-width: 170px;
+      padding: 6px 0;
+      border-radius: 5px;
+      border: 1px solid;
+      letter-spacing: 1px;
+      text-align: center;
+      user-select: none;
+    }
+
+    .button:hover {
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+  <div id="screenwriter"></div>
+<script src="./screenwriter.js"></script><script src="./vendor.js"></script></body>
+</html>

@@ -1,6 +1,5 @@
 node_modules/
 coverage/
-dist/
 config/config.js
 .sass-cache/
 npm-debug.log
