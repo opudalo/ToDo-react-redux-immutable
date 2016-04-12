@@ -22,7 +22,7 @@ var webpackConfig = {
   output : {
     filename   : filename,
     path       : paths.project(config.dir_dist),
-    publicPath : '/'
+    publicPath : './'
   },
   plugins : [
     new webpack.DefinePlugin(config.globals),
