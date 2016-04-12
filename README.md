@@ -1,4 +1,5 @@
 This fork is an example implementation of [storybook](https://github.com/kadirahq/react-storybook)-like tool in-app. [More details](https://medium.com/@opudalo/easylium-ep-0-react-storybook-865eeaa9ba9a#.rxk6ak4uh)
+=======================
 
 Tips, trick and best practices using React, Redux and ImmutableJS
 =======================
